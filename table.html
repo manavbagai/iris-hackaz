@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Candidate Table</title>
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<!-- own css -->
+	<script type="text/javascript"  src="table.js"></script>
+	<link rel="stylesheet" type="text/css" href="table.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row pt-4">
+			<dir class="col-md-12">
+				<h1 class="text-center">Candidate Scores</h1>
+			</dir>
+		</div>
+		<div class="row">
+			<table class="col-md-12 table table-striped">
+			  	<thead class="thead-dark">
+				    <tr>
+				      <th scope="col">S.No</th>
+				      <th scope="col">NAME</th>
+				      <th scope="col">CONFIDENCE</th>
+				      <th scope="col">CODE ACCURACY</th>
+				      <th scope="col">POP QUIZ SCORE</th>
+				      <th scope="col">OVERALL SCORE</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr class="hand-cursor" onclick="moveToDetailedView()">
+				      <th scope="row">1</th>
+				      <td>RISHAB</td>
+				      <td>80</td>
+				      <td>79</td>
+				      <td>3</td>
+				      <td>80</td>
+				    </tr>
+				    <tr class="hand-cursor" onclick="moveToDetailedView()">
+				      <th scope="row">2</th>
+				      <td>Adam</td>
+				      <td>19</td>
+				      <td>38</td>
+				      <td>15</td>
+				      <td>17</td>
+				    </tr>
+				    <tr class="hand-cursor" onclick="moveToDetailedView()">
+				      <th scope="row">3</th>
+				      <td>Peter</td>
+				      <td>23</td>
+				      <td>89</td>
+				      <td>17</td>
+				      <td>22</td>
+				    </tr>
+				    <tr class="hand-cursor" onclick="moveToDetailedView()">
+				      <th scope="row">4</th>
+				      <td>Olivia</td>
+				      <td>9</td>
+				      <td>18</td>
+				      <td>13</td>
+				      <td>67</td>
+				    </tr>
+				    <tr class="hand-cursor" onclick="moveToDetailedView()">
+				      <th scope="row">5</th>
+				      <td>Spark</td>
+				      <td>43</td>
+				      <td>24</td>
+				      <td>56</td>
+				      <td>19</td>
+				    </tr>
+				    <tr class="hand-cursor" onclick="moveToDetailedView()">
+				      <th scope="row">6</th>
+				      <td>Rachelle</td>
+				      <td>14</td>
+				      <td>89</td>
+				      <td>43</td>
+				      <td>15</td>
+				    </tr>
+				    <tr class="hand-cursor" onclick="moveToDetailedView()">
+				      <th scope="row">7</th>
+				      <td>Penne</td>
+				      <td>23</td>
+				      <td>9</td>
+				      <td>49</td>
+				      <td>12</td>
+				    </tr>
+				    <tr class="hand-cursor" onclick="moveToDetailedView()">
+				      <th scope="row">8</th>
+				      <td>Justin</td>
+				      <td>65</td>
+				      <td>15</td>
+				      <td>76</td>
+				      <td>12</td>
+				    </tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+				
+</body>
+</html>

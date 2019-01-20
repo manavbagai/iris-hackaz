@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Detailed view of the candidate</title>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<!-- self written file -->
+	<script type="text/javascript"  src="detailed-view.js"></script>
+	<link rel="stylesheet" type="text/css" href="detailed-view.css">
+
+	<!-- charts.js -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row pt-md-5">
+			<div class="col-md-12 text-center">
+				<h1>Detailed Candidate Profile</h1>
+			</div>
+		</div>
+		<div class="row text">
+		  	<div class="col-md-10 offset-md-1 card">
+		      	<div class="row card-body">
+		      		<div class="col-md-3">
+		      			<img src="images/me.png" alt="Paris" width="150" height="150">
+		      		</div>
+		      		<div class="col-md-9">
+		      			<div class="row pb-md-4">
+		      				<div class="col-md-12">
+		      					<h3 class="card-title pt-md-0 mt-md-0 pb-md-0 mb-md-0">Rishab Banerjee</h3>
+		      				</div>
+		      			</div>
+		      			<div class="row">
+		      				<div class="col-md-12">
+		      					<ul class="font-italic pt-md-0 mt-md-0 pb-md-0 mb-md-0 pl-md-0 ml-md-0"> <span>Email:</span>crpbanerjee@gmail.com</ul>
+		        				<ul class="font-italic pt-md-0 mt-md-0 pb-md-0 mb-md-0 pl-md-0 ml-md-0"> <span>Age:</span>25</ul>
+		        				<ul class="font-italic pt-md-0 mt-md-0 pb-md-0 mb-md-0 pl-md-0 ml-md-0"> <span>Phone Number:</span>480999999</ul>		
+		      				</div>
+		      			</div>
+		      		</div>
+		      	</div>
+
+		      	<div class="row pt-md-3">
+      				<div class="col-md-12">
+      					<h3>Work Experience</h3>
+      				</div>
+      			</div>
+      			<div class="row pt-md-0">
+      				<div class="col-md-12">
+      					<ul class="fs-22 pb-md-0 mb-md-0">Software Engineer, Liv.ai</ul>
+      					<li class="fs-10 pl-md-4 ml-md-4">Developed a website from scratch using Django and Angular</li>
+      					<li class="fs-10 pl-md-4 ml-md-4">Scaled website using Redis</li>
+      				</div>
+      			</div>
+      			<div class="row pt-md-4">
+      				<div class="col-md-12">
+      					<h3>Education</h3>
+      				</div>
+      			</div>
+      			<div class="row pt-md-0 mt-md-0">
+      				<div class="col-md-12">
+      					<ul class="fs-22 pb-md-0 mb-md-0">University Of Delhi, <span class="fs-16">Computer Engineering</span></ul>
+      				</div>
+      			</div>
+				<div class="row pt-md-4 mt-md-5">
+      				<div class="col-md-12">
+      					<h3>Metric Proficiency</h3>
+      				</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-md-12">
+      					<canvas id="metric-bar-graph"></canvas>
+      				</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-md-12">
+      					<h3 class="pt-md-5 mt-md-5"> Skill Proficiency</h3>
+      				</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-md-12">
+      					<canvas id="skills-bar-graph"></canvas>
+      				</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-md-12">
+      					<h3 class="pt-md-5 mt-md-5"> New Discovered Skills</h3>
+      				</div>
+      			</div>
+      			<div class="row mb-md-5 pb-md-5">
+      				<div class="col-md-3">
+      					<button type="button" class="btn btn-primary">
+						 	CSS <span class="badge badge-light">intermidiate</span>
+						</button>
+      				</div>
+      				<div class="col-md-3">
+      					<button type="button" class="btn btn-primary">
+						 	HTML <span class="badge badge-light">beginner</span>
+						</button>
+      				</div>
+      			</div>
+
+
+
+
+		    </div>
+		</div>
+	</div>
+</body>
+
+<script>
+	var skills = getSkills();
+	var metrics = getMetrics();
+
+	var metricBarGraphData = {
+		labels: metrics["labels"],
+		datasets: [{
+			backgroundColor: '#DBE213',
+			label: 'metric scores',
+			borderWidth: 1,
+			data: metrics["data"]
+		}]
+	};
+	var skillBarGraphData = {
+		labels: skills["labels"],
+		datasets: [{
+			backgroundColor: 'red',
+			label: 'skill scores',
+			borderWidth: 1,
+			data: skills["data"]
+		}]
+	};
+	window.onload = function() {
+		var metricBarGraph = document.getElementById('metric-bar-graph').getContext('2d');
+		window.metricBarChart = new Chart(metricBarGraph, {
+			type: 'bar',
+			data: metricBarGraphData,
+			options: {
+				elements: {
+					rectangle: {
+						borderWidth: 2,
+					}
+				},
+				responsive: true,
+				legend: {
+					position: 'right',
+				},
+				title: {
+					display: false,
+					text: 'metric vs score'
+				},
+				scales: {
+					xAxes: [{
+    					maxBarThickness: 50,
+  					}],
+				}
+			}
+		});
+
+		var skillsBarGraph = document.getElementById('skills-bar-graph').getContext('2d');
+		window.skillsBarChart = new Chart(skillsBarGraph, {
+			type: 'horizontalBar',
+			data: skillBarGraphData,
+			options: {
+				elements: {
+					rectangle: {
+						borderWidth: 2,
+					}
+				},
+				responsive: true,
+				legend: {
+					position: 'right',
+				},
+				title: {
+					display: false,
+					text: 'skills vs score'
+				},
+				scales: {
+					yAxes: [{
+    					maxBarThickness: 50,
+  					}],
+				},
+			}
+		});
+	}
+</script>
+</html>

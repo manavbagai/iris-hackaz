@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Company X Hacker Round</title>
+    <link rel="stylesheet" href="style/main.css" />
+      <link rel="stylesheet" href="style/main.scss">
+      
+  </head>
+  <body>
+    <div id="container-fluid">
+            <nav id="navbar-example2" class="navbar navbar-dark bg-dark bg-light">
+            <a class="navbar-brand" href="#">Hacker Round</a>
+            <button id="run">RUN</buttun>
+            </nav>
+    </div>
+ 
+        <div id="code-env">
+            <div>
+                
+                
+                <!-- this is the section where you will write the code there is a section for html css js and results. the span tags are for the boxes around the word in each section to tell you what the section is for -->
+                <div class="row" style="height: 570px;">
+                    <div class="col-sm-3">
+                        <div class="file_tree">
+                            <!-- <input type="checkbox" id="f_myfilms">
+                            <label for="f_myfilms">My Films</label> -->
+                            <!-- <div class="dir_wrapper">
+                              <input type="checkbox" id="f_wehave">
+                              <label for="f_wehave">We Have</label>
+                              <div class="dir_wrapper">
+                                <input type="checkbox" id="f_togo">
+                                <label for="f_togo">To Go</label>
+                                <div class="dir_wrapper">
+                                  <input type="radio" name="hosted_files" id="f_deeper_js" value="Deeper.js">
+                                  <label for="f_deeper_js">Deeper.js</label>
+                                  <input type="radio" name="hosted_files" id="f_fileception_js" value="Fileception.js">
+                                  <label for="f_fileception_js">Fileception.js</label>
+                                </div>
+                              </div>
+                            </div> -->
+                            
+                            <input type="checkbox" id="f_justafolder">
+                            <label for="f_justafolder">style</label>
+                            <div class="dir_wrapper">
+                              <input type="radio" name="hosted_files" id="f_withafile_js" value="with_a_file.js">
+                              <label for="f_withafile_js">main.scss</label>
+                              <input type="radio" name="hosted_files" id="f_withafile_js2" value="with_a_file.js">
+                              <label for="f_withafile_js2" onclick="changeFile('main.css')">main.css</label>
+                            </div>
+
+                            <input type="checkbox" id="f_justafolder3">
+                            <label for="f_justafolder3">scripts</label>
+                            <div class="dir_wrapper">
+                              <input type="radio" name="hosted_files" id="f_withafile_js3" value="with_a_file.js">
+                              <label for="f_withafile_js3" onclick="changeFile('main.js')">main.js</label>
+                            </div>
+                            
+                            <input type="radio" name="hosted_files" id="f_main_js" value="main.js" checked>
+                            <label for="f_main_js">index.js</label>
+                            <input type="radio" name="hosted_files" id="f_globals_js" value="globals.js">
+                            <label for="f_globals_js" onclick="changeFile('index.html')">index.html</label>
+                            <input type="radio" name="hosted_files" id="f_filler_js" value="filler.js">
+                            <label for="f_filler_js">package.json</label>
+                            <input type="radio" name="hosted_files" id="f_horror_vacui_js" value="horror_vacui.js">
+                            <label for="f_horror_vacui_js">data.json</label>
+                          </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div>
+                            <div id="editor" style="height: 570px;"></div>
+                            <!-- <textarea id="htmlCode"></textarea> -->
+                            <!-- <textarea id="cssCode"> </textarea>
+                            <textarea id="jsCode"> </textarea> -->
+                        </div>
+                    </div>
+                </div>
+                
+                
+                 <!-- <div id="cssSec"  class="sections" >
+                     <span>CSS</span>
+                    <textarea id="cssCode"> </textarea>
+                   </div>
+                
+                 <div id="jsSec" class="sections" >
+                     <span>JS</span>
+                     <textarea id="jsCode"> </textarea>
+                   </div> -->
+                
+                 <div id="resultSec" class="sections">
+                    <span>RESULTS</span>
+                     <iframe id="resultIframe"></iframe>
+                
+                
+                   </div>
+              </div>
+        </div>
+  
+        <div class="row" id="vue-app">
+            
+        </div>
+    
+        <div id="chatbot">
+            <section class="avenue-messenger">
+                <div class="menu">
+                 <div class="items"><span>
+                   <a href="#" title="Minimize">&mdash;</a><br>
+              <!--     
+                   <a href="">enter email</a><br>
+                   <a href="">email transcript</a><br>-->
+                   <a href="#" title="End Chat">&#10005;</a>
+                   
+                   </span></div>
+                  <div class="button">...</div>
+                </div>
+                <div class="agent-face">
+                  <div class="half">
+                   <img class="agent circle" src="http://askavenue.com/img/17.jpg" alt="Jesse Tino"></div>
+                </div>
+              <div class="chat">
+                <div class="chat-title">
+                  <h1>Jenny</h1>
+                  <h2>Adaptive Interiviewing Assistant</h2>
+                <!--  <figure class="avatar">
+                    <img src="http://askavenue.com/img/17.jpg" /></figure>-->
+                </div>
+                <div class="messages">
+                  <div class="messages-content"></div>
+                </div>
+                <div class="message-box">
+                  <textarea type="text" class="message-input" placeholder="Type message..."></textarea>
+                  <button type="submit" class="message-submit">Send</button>
+                </div>
+              </div>
+                </div>
+        </div>
+        
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+    <script src="http://dobtco.github.io/jquery-resizable-columns/dist/jquery.resizableColumns.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.9/ace.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/lib/sass.js"></script>
+    <!-- <script src="https://raw.githubusercontent.com/twolfson/iframe2image/master/dist/iframe2image.min.js" type="application/javascript"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.2/mode-css.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.2/mode-javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.2/mode-html.js"></script> -->
+    <!-- <script src="lib/iframe2image.min.js"></script> -->
+    <script src="dist/js/app.js"></script>
+    <script>
+        var editor = ace.edit("editor");
+editor.setTheme("ace/theme/monokai");
+editor.getSession().setMode("ace/mode/html");
+// editor.getSession().setMode("ace/mode/html");
+
+        </script>
+  </body>
+</html>

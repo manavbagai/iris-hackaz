@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CompanyX Hacker Round</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+ <!-- Latest compiled and minified CSS -->
+ <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.js"></script>
+<style>
+  .new_test{
+    width: 320px;
+    font-size: 18pt;
+    background: whitesmoke;
+    color: #5a5a5a;
+    font-weight: 300;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 45px 73px;
+    text-align: center;
+    line-height: 24pt;
+    margin-top: 60px;
+    border: dashed 2px #dadada;
+    border-radius: 7px;
+  }
+  .new_test:hover{
+    color:white;
+    background: #4CAF50;
+    cursor: pointer;
+    transition: all 1s ease 0s;
+  }
+  .options .content{
+    margin: 10px 0px !important;
+  }
+</style>
+</head>
+
+     
+<body>
+    <nav id="navbar-example2" class="navbar navbar-dark bg-dark bg-light">
+        <a class="navbar-brand" href="#">Generate Adaptive Assessment from Candidate Profiles</a>
+
+      </nav>
+    <div class="container">
+        <div class="text-center" style="margin-top:30px;">
+          <p>A test will be generated based on selected candidate's profile.</p>
+            <a class="positive ui button center-block" href="generated_test_web.html">Generate Test</a>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+              <h3 style="margin-top:20px;">Saved Candidate Profiles</h4>
+              <div>
+                  <div class="ui three column grid">
+                      <div class="column">
+                        <div class="ui fluid card">
+                          <div class="image">
+                            <img src="https://semantic-ui.com/images/avatar/large/steve.jpg">
+                          </div>
+                          <div class="content">
+                            <a class="header"><input type="checkbox" /> Daniel Louise</a> 
+                          </div>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="ui fluid card">
+                          <div class="image">
+                            <img src="https://semantic-ui.com/images/avatar/large/veronika.jpg">
+                          </div>
+                          <div class="content">
+                            <a class="header"><input type="checkbox" /> Helen Troy</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="ui fluid card">
+                          <div class="image">
+                            <img src="https://semantic-ui.com/images/avatar/large/stevie.jpg">
+                          </div>
+                          <div class="content">
+                            <a class="header"><input type="checkbox" /> Stevie Feliciano</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="column">
+                          <div class="ui fluid card">
+                            <div class="image">
+                              <img src="https://semantic-ui.com/images/avatar/large/elliot.jpg">
+                            </div>
+                            <div class="content">
+                              <a class="header"><input type="checkbox" /> Elliot Fu</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <h4 style="    margin-top: 60px;">
+                Upload Resume
+              </h4>
+                <form action="/file-upload"
+                  class="dropzone"
+                  id="my-awesome-dropzone"></form>
+            </div>
+        </div>
+        
+    </div>
+
+  </body>
+</html>
